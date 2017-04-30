@@ -1,0 +1,93 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Welcome to the farm</h1>
+<h4>What animals can we hear at our farm? </h4>
+<h4>Press the key on your keyboard to find out!</h4>
+  <div class="keys">
+    <div data-key="65" class="key" id="cat">
+      <div class="letters">
+        <kbd>A</kbd>
+      </div>
+    </div>
+    <div data-key="83" class="key" id="dog">
+      <div class="letters">
+        <kbd>S</kbd>
+      </div>
+    </div>
+    <div data-key="68" class="key" id="sheep">
+      <div class="letters">
+        <kbd>D</kbd>
+      </div>
+    </div>
+    <div data-key="70" class="key" id="pig">
+      <div class="letters">
+        <kbd>F</kbd>
+      </div>
+    </div>
+    <div data-key="71" class="key" id="rooster">
+      <div class="letters">
+        <kbd>G</kbd>
+      </div>
+    </div>
+    <div data-key="72" class="key" id="cow">
+      <div class="letters">
+        <kbd>H</kbd>
+      </div>
+    </div>
+    <div data-key="74" class="key" id="duck">
+      <div class="letters">
+        <kbd>J</kbd>
+      </div>
+    </div>
+    <div data-key="75" class="key" id="goat">
+      <div class="letters">
+        <kbd>K</kbd>
+      </div>
+    </div>
+    <div data-key="76" class="key" id="wolves">
+      <div class="letters">
+        <kbd>L</kbd>
+      </div>
+    </div>
+  </div>
+
+  <audio data-key="65" src="sounds/cat.mp3"></audio>
+  <audio data-key="83" src="sounds/dog.mp3"></audio>
+  <audio data-key="68" src="sounds/sheep.mp3"></audio>
+  <audio data-key="70" src="sounds/pig.mp3"></audio>
+  <audio data-key="71" src="sounds/rooster.mp3"></audio>
+  <audio data-key="72" src="sounds/cow.mp3"></audio>
+  <audio data-key="74" src="sounds/duck.mp3"></audio>
+  <audio data-key="75" src="sounds/goat.mp3"></audio>
+  <audio data-key="76" src="sounds/wolves.mp3"></audio>
+
+<script>
+function removeTransition(e) {
+  if (e.propertyName !== 'transform') return; // skip it if it's not a transform
+  this.classList.remove('playing');
+}
+
+function playSound(e) {
+  const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
+  const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
+  if (!audio) return;
+  key.classList.add('playing');
+  audio.currentTime = 0;
+  audio.play();
+}
+
+const keys = Array.from(document.querySelectorAll('.key'));
+keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+window.addEventListener('keydown', playSound);
+</script>
+
+
+</body>
+</html>

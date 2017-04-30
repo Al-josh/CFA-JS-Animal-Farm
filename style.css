@@ -1,0 +1,108 @@
+html {
+  background: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493522896/pexels-photo-248880-min_qm45cs.jpg) bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body,html {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+h1 {
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 0 .5rem white;
+}
+
+h4 {
+  text-align: center;
+  font-size: 30px;
+  text-shadow: 0 0 .5rem white;
+}
+
+.keys {
+  display: flex;
+  flex: 1;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.key {
+  border: .3rem solid black;
+  border-radius: .5rem;
+  margin: 5px;
+  font-size: 1.5rem;
+  padding: 1rem .5rem;
+  transition: all .07s ease;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 .5rem black;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.letters {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 80px;
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: green;
+  box-shadow: 0 0 1rem green;
+}
+
+kbd {
+  display: block;
+  font-size: 4rem;
+}
+
+.sound {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .1rem;
+  color: #ffc600;
+}
+
+#cat {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524438/cat_tzojh2.jpg);
+}
+
+#dog {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524442/dog_fyyhsd.png);
+}
+
+#sheep {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524440/sheep_d6mprq.jpg);
+}
+
+#pig {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524441/pig_ofeqmm.jpg);
+}
+
+#rooster {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524446/rooster_lp5urd.png);
+}
+
+#cow {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524441/cow_xrqggg.jpg);
+}
+
+#duck {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524439/duck_lxutmv.jpg);
+}
+
+#goat {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524441/goat_tvi6tg.jpg);
+}
+
+#wolves {
+  background-image: url(http://res.cloudinary.com/dzctpgu9d/image/upload/v1493524439/wolf_imkbuq.jpg);
+}
